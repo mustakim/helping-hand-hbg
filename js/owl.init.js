@@ -1,5 +1,5 @@
 //Owl Carousel
-$('#customer-testi').owlCarousel({
+$('#customer-testi-mob').owlCarousel({
   loop: true,
   nav: false,
   dots: true,
@@ -18,7 +18,26 @@ $('#customer-testi').owlCarousel({
     },
   },
 });
-$('#customer-testii').owlCarousel({
+$('#customer-testi-pc').owlCarousel({
+  loop: true,
+  nav: false,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    1000: {
+      items: 2,
+    },
+    1500: {
+      items: 3,
+    },
+  },
+});
+$('#customer-testii-mob').owlCarousel({
   loop: true,
   nav: false,
   dots: true,
@@ -36,6 +55,14 @@ $('#customer-testii').owlCarousel({
       items: 3,
     },
   },
+});
+$('#customer-testii-pc').owlCarousel({
+  loop: true,
+  nav: false,
+  dots: true,
+  autoplay: false,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
 });
 
 $('#owl-fade').owlCarousel({
