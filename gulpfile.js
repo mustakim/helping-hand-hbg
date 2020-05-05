@@ -21,4 +21,13 @@ gulp.task('watch', function() {
     watch('./js/app.js', function() {
         browserSync.reload();
     })
+
+    watch('./js/app.js', function() {
+        browserSync.reload();
+    })
+
+    watch('./js/map-controller.js', function() {
+        browserSync.reload();
+    })
+    
 });

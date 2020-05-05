@@ -88,7 +88,16 @@ $(function () {
 
   $.get(districtUrl, function () {}).done(function (response) {
     districtData = response.data;
+    let habiganjData = districtData.find(
+      (o) => o.name === 'Hobiganj'
+    );
+  
+    setHobiganjValue(
+      habiganjData
+    );
   });
+
+
 
   $('#mapColumn a').on('click mouseover', function () {
     // Get total infected from previously loaded data
@@ -99,6 +108,12 @@ $(function () {
     let selectedDistrict = districtData.find(
       (o) => o.name === selectedDistrictName
     );
+
+    // let habiganjData = districtData.find(
+    //   (o) => o.name === 'Hobiganj'
+    // );
+
+    // console.log('data', habiganjData);
 
     // Division
     let selectedDivision = '';
@@ -155,6 +170,10 @@ $(function () {
           totalAffectedInDivision - totalAffectedInDivisionPreviously
         );
 
+        // setHobiganjValue(
+        //   habiganjData
+        // );
+
     // Scroll to the info section in mobile
     let isMobile = false; //initiate as false
     // device detection
@@ -198,6 +217,9 @@ function setValueWhenNotFound(
   $('#selectedDistrictCount').text(0);
   setIncreasedText($('#districtComparator'), 0);
 
+  $('#habiganjCount').text(0);
+
+
   $('#selectedDistrictPercentage').text('0 %');
 
   $('#selectedDivisionName').text(selectedDivisionName);
@@ -214,6 +236,7 @@ function setSelectedValue(
   divisinCount,
   divisionYesterday
 ) {
+
   $('#selectedDistrict').text(districtName);
   $('#selectedDistrictCount').text(districtAffected);
   setIncreasedText($('#districtComparator'), districtComparator);
@@ -225,6 +248,14 @@ function setSelectedValue(
   $('#selectedDivisionName').text(divisionName);
   $('#selectedDivisionCount').text(divisinCount);
   setIncreasedText($('#divisionComparator'), divisionYesterday);
+}
+
+function setHobiganjValue(
+  data
+) {
+  // console.log('get', data);
+  $('#habiganjCount').text(data.count);
+  $('#habiganjCountForMobile').text(data.count);
 }
 
 function setIncreasedText(element, count) {

@@ -150,6 +150,7 @@
         <div class="rounded py-5 px-3 px-sm-0">
           <!-- <div class="customContainer"> -->
           <!-- Bangladesh summary card -->
+          <!-- mobile section -->
           <div class="mobile-section">
             <div class="row">
               <div class="col-6 custom-padding">
@@ -165,8 +166,8 @@
                       <div class="case-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="case-color count-bd">65478</div>
-                      <div class="case-color count-hbg">1254</div>
+                      <div class="case-color count-bd" id="numberOfConfirmedCasesForMobile"></div>
+                      <div class="case-color count-hbg" id="habiganjCountForMobile"></div>
                     </div>
                     <!-- <span class="testCard count gsans" id="numberOfTests"></span>
                   <h6 class="gsans">Total Tests</h6> -->
@@ -184,8 +185,8 @@
                       <div class="death-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="death-color count-bd">65478</div>
-                      <div class="death-color count-hbg">1254</div>
+                      <div class="death-color count-bd" id="numberOfDeathsForMobile"></div>
+                      <div class="death-color count-hbg">1</div>
                     </div>
                     <!-- <span class="caseCard count gsans" id="numberOfConfirmedCases"></span>
                   <h6 class="gsans">Coronavirus positive</h6> -->
@@ -203,8 +204,8 @@
                       <div class="recovered-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="recovered-color count-bd">65478</div>
-                      <div class="recovered-color count-hbg">1254</div>
+                      <div class="recovered-color count-bd" id="numberOfRecoveryForMobile"></div>
+                      <div class="recovered-color count-hbg">1</div>
                     </div>
                     <!-- <span class="deathCard count gsans" id="numberOfDeaths"></span>
                   <h6 class="gsans">Deaths</h6> -->
@@ -222,8 +223,8 @@
                       <div class="test-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="test-color count-bd">65478</div>
-                      <div class="test-color count-hbg">1254</div>
+                      <div class="test-color count-bd" id="numberOfTestsForMobile"></div>
+                      <div class="test-color count-hbg">N/A</div>
                     </div>
 
                     <!-- <span class="recoveryCard count gsans" id="numberOfRecovery"></span>
@@ -234,6 +235,7 @@
             </div>
           </div>
 
+          <!-- pc section -->
           <div class="pc-section">
             <div class="row">
               <div class="col-3">
@@ -249,8 +251,8 @@
                       <div class="case-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="case-color count-bd">65478</div>
-                      <div class="case-color count-hbg">1254</div>
+                      <div class="case-color count-bd" id="numberOfConfirmedCases"></div>
+                      <div class="case-color count-hbg" id="habiganjCount"></div>
                     </div>
                     <!-- <span class="testCard count gsans" id="numberOfTests"></span>
                   <h6 class="gsans">Total Tests</h6> -->
@@ -268,8 +270,8 @@
                       <div class="death-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="death-color count-bd">65478</div>
-                      <div class="death-color count-hbg">1254</div>
+                      <div class="death-color count-bd" id="numberOfDeaths"></div>
+                      <div class="death-color count-hbg">1</div>
                     </div>
                     <!-- <span class="caseCard count gsans" id="numberOfConfirmedCases"></span>
                   <h6 class="gsans">Coronavirus positive</h6> -->
@@ -287,8 +289,8 @@
                       <div class="recovered-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="recovered-color count-bd">65478</div>
-                      <div class="recovered-color count-hbg">1254</div>
+                      <div class="recovered-color count-bd" id="numberOfRecovery"></div>
+                      <div class="recovered-color count-hbg">1</div>
                     </div>
                     <!-- <span class="deathCard count gsans" id="numberOfDeaths"></span>
                   <h6 class="gsans">Deaths</h6> -->
@@ -306,8 +308,8 @@
                       <div class="test-bg hbg-div">HBG</div>
                     </div>
                     <div class="flex-container">
-                      <div class="test-color count-bd">65478</div>
-                      <div class="test-color count-hbg">1254</div>
+                      <div class="test-color count-bd" id="numberOfTests"></div>
+                      <div class="test-color count-hbg">N/A</div>
                     </div>
 
                     <!-- <span class="recoveryCard count gsans" id="numberOfRecovery"></span>
@@ -1592,14 +1594,14 @@
 
     <!-- new added -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/minified/coronaCounter.min.js"></script>
+    <script src="js/coronaCounter.js"></script>
     <script src="js/minified/chart-constructor.min.js"></script>
     <script src="js/minified/plugin.min.js"></script>
     <script src="js/minified/darkMood.min.js"></script>
     <script src="js/minified/dhaka-city.min.js"></script>
     <script src="js/caseStudy.js"></script>
     <script src="js/map.js"></script>
-    <script src="js/minified/map-controller.min.js"></script>
+    <script src="js/map-controller.js"></script>
 
     <script>
       window.onscroll = scroll1;

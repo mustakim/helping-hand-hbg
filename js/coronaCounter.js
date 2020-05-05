@@ -108,6 +108,12 @@ function constructData(
   case_per_one_m,
   death_per_one_m
 ) {
+
+  $("#numberOfTestsForMobile").text(total_tests);
+  $("#numberOfConfirmedCasesForMobile").text(confirmed);
+  $("#numberOfDeathsForMobile").text(dead);
+  $("#numberOfRecoveryForMobile").text(recovered);
+
   $("#numberOfTests").text(total_tests);
   $("#numberOfConfirmedCases").text(confirmed);
   $("#numberOfDeaths").text(dead);
