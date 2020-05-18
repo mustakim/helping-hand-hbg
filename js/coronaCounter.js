@@ -111,13 +111,17 @@ function constructData(
 
   $("#numberOfTestsForMobile").text(total_tests);
   $("#numberOfConfirmedCasesForMobile").text(confirmed);
+  $("#numberOfTodayConfirmedForMobile").text(today_case);
   $("#numberOfDeathsForMobile").text(dead);
   $("#numberOfRecoveryForMobile").text(recovered);
 
   $("#numberOfTests").text(total_tests);
   $("#numberOfConfirmedCases").text(confirmed);
+  $("#numberOfTodayConfirmed").text(today_case);
   $("#numberOfDeaths").text(dead);
   $("#numberOfRecovery").text(recovered);
+
+  
 
   // table data constructor
   $("#td_total").text(confirmed);
